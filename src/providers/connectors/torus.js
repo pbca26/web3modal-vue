@@ -16,9 +16,9 @@ const ConnectToTorus = async (Torus, opts) => {
                     : network;
 
             const torus = new Torus({
-                buttonPosition: opts.config?.buttonPosition || buttonPosition,
-                apiKey: opts.config?.apiKey || apiKey,
-                modalZIndex: opts.config?.modalZIndex || modalZIndex
+                buttonPosition: opts.config && opts.config.buttonPosition || buttonPosition,
+                apiKey: opts.config && opts.config.apiKey || apiKey,
+                modalZIndex: opts.config && opts.config.modalZIndex || modalZIndex
             });
             await torus.init({
                 showTorusButton: false,
